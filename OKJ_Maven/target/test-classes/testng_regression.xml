@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression" parallel="methods" thread-count="5">
+	<test name="Test for Login Scenario">
+	<parameter name="browser" value ="chrome"/>
+		<classes>
+			<class name="testscripts.HomePageScenario">
+				<methods>
+					<include name="validateOKJHomepage"></include>
+					<include name="headerNavigation"></include>
+					<include name="footerNavigation"></include>
+					<include name="categoryLandingPageValidation"></include>
+					<include name="subCategoryLandingPageValidation"></include>
+					<include name="searchFunctionalityValidation"></include>
+				</methods>
+			</class>
+			
+			<class name="testscripts.ProductDetailsPageScenario">
+				<methods>
+					<include name="pDPValidation"></include>
+				</methods>
+			</class>
+			
+			<class name="testscripts.ProductListingPageScenario">
+				<methods>
+					<include name="pLPValidation"></include>
+				</methods>
+			</class>
+			<class name="testscripts.AccountInformationPageScenario">
+				<methods>
+					<include name="myAccountPageValidation"></include>
+				</methods>
+			</class>
+			<class name="testscripts.ProductListingPageScenario">
+				<methods>
+					<include name="shoppingCartPageValidation"></include>
+					<include name="checkOutValidationWithPaypalAsPaymentMethod"></include>
+				</methods>
+			</class>
+			
+			<class name="testscripts.CheckOutPageScenario">
+				<methods>
+					<include name="guestCheckOutValidationWithVISAcardPayment"></include>
+					<include name="guestCheckOutValidationwithMASTERcardPayment"></include>
+					<include name="guestCheckOutValidationwithDISCOVERcardPayment"></include>
+					<include name="registeredCheckOutValidationwithVISAcardPayment"></include>
+					<include name="registeredCheckOutValidationwithMASTERcardPayment"></include>
+					<include name="registeredCheckOutValidationwithDISCOVERcardPayment"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
